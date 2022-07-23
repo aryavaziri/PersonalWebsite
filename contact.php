@@ -39,7 +39,7 @@
                 <nav class="nav navbar-brand nav-masthead justify-content-center float-md-end">
                     <a class="nav-link" href="index.html">Home</a>
                     <a class="nav-link" href="projects.html">Projects</a>
-                    <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+                    <a class="nav-link active" aria-current="page" href="contact.php">Contact</a>
                 </nav>
             </div>
         </header>
@@ -72,10 +72,8 @@
                     <p class="mb-4">+989025868086</p>
                     <a href="https://www.instagram.com/aryavaziri/" class="btn btn-secondary fs-4 rounded-circle"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.linkedin.com/in/arya-vaziri-7116ab206/" class="btn btn-secondary fs-4 rounded-circle"><i class="fab fa-linkedin"></i></a>
-                    <a href="" class="btn btn-secondary fs-4 rounded-circle"><i class="fab fa-google"></i>
-                    </a>
-                    <a href="https://github.com/aryavaziri" class="btn btn-secondary fs-4 rounded-circle">
-                        <i class="fab fa-github"></i></a>
+                    <a href="mailto:arya.vaziri@gmail.com" class="btn btn-secondary fs-4 rounded-circle"><i class="fab fa-google"></i></a>
+                    <a href="https://github.com/aryavaziri" class="btn btn-secondary fs-4 rounded-circle"><i class="fab fa-github"></i></a>
                 </div>
             </div>
         </main>
