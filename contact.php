@@ -67,7 +67,7 @@
                 <div class="p-3 col-12 rounded-3 bg-opacity-10 col-lg-4 bg-light">
                     <h2 class="mb-4">Contact me</h2>
                     <h4>Email:</h4>
-                    <p>arya.vaziri@gmail.com</p>
+                    <p>arya.vaziri@gmail.com<br>info@aaryaa.ir</p>
                     <h4>Phone number:</h4>
                     <p class="mb-4">+989025868086</p>
                     <a href="https://www.instagram.com/aryavaziri/" class="btn btn-secondary fs-4 rounded-circle"><i class="fab fa-instagram"></i></a>
@@ -144,21 +144,18 @@
 
 
     <?php
-    $headers = 'from : aaryaa.ir Contact Me page \r\n' . phpversion() . "\r\n";
-    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    $myMail = 'arya.vaziri@gmail.com';
+    $headers = "from: contactme@aaryaa.ir";
+    $myMail = 'info@aaryaa.ir';
     if (
         $_SERVER["REQUEST_METHOD"] == "POST"
     ) {
-        // echo "<h2 style='color: green'>hi $contactForm[name], your comment recived. contact whit you soon by email address $contactForm[mail]</h2>";
-        // all field are complete...
         $name = check($_POST['name']);
         $sub = check($_POST['sub']);
         $mail = check($_POST['mail']);
         $msg = check($_POST['msg']);
-        $txt = "<h3>This message has been send from $name</h3>";
-        $txt .= "<h4>Email: $mail</h4>";
-        $txt .= "<h4>Subject: $sub</h4>";
+        $txt = "This message has been send from $name \n";
+        $txt .= "Email: $mail \n";
+        $txt .= "Subject: $sub \n";
         $txt .= $msg;
         mail($myMail, check($_POST['sub']), $txt, $headers);
         echo "<script>alert('Thanks for your message. I will contact you as soon as possible.')</script>";
