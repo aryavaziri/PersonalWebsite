@@ -152,16 +152,25 @@
     ) {
         // echo "<h2 style='color: green'>hi $contactForm[name], your comment recived. contact whit you soon by email address $contactForm[mail]</h2>";
         // all field are complete...
-        $name = $_POST['name'];
-        $sub = $_POST['sub'];
-        $mail = $_POST['mail'];
+        $name = check($_POST['name']);
+        $sub = check($_POST['sub']);
+        $mail = check($_POST['mail']);
+        $msg = check($_POST['msg']);
         $txt = "<h3>This message has been send from $name</h3>";
         $txt .= "<h4>Email: $mail</h4>";
         $txt .= "<h4>Subject: $sub</h4>";
-        $txt .= $_POST['msg'];
-        mail($myMail, $_POST['sub'], $txt, $headers);
-        echo "alert('Thanks for your message. I will contact you as soon as possible.')";
+        $txt .= $msg;
+        mail($myMail, check($_POST['sub']), $txt, $headers);
+        echo "<script>alert('Thanks for your message. I will contact you as soon as possible.')</script>";
     }
+    function check($data)
+    {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
     ?>
 
 

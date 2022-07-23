@@ -65,7 +65,14 @@
               <p class="lead">
                 These are some of my previous projects including production and
                 automation. To download the CV file in pdf format click
-                <a href="CV.pdf">here</a>
+                <a href="CV.pdf">here</a>. To download complete portfolio, you
+                have to verify your Email first. To verify your email,
+                <a
+                  href="verify.php"
+                  data-bs-toggle="modal"
+                  data-bs-target="#Verify"
+                  >click here</a
+                >.
               </p>
             </div>
           </div>
@@ -176,17 +183,15 @@
 
         <div
           class="modal fade"
-          id="AutoclaveModal"
+          id="Verify"
           tabindex="-1"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
         >
-          <div class="modal-dialog modal-lg">
+          <div class="modal-dialog modal-lg w-25">
             <div class="modal-content bg-popup rounded-3">
               <div class="modal-header">
-                <h3 class="px-5 modal-title text-danger" id="exampleModalLabel">
-                  Timber treatment autoclave
-                </h3>
+                <h3 class="px-5 modal-title text-danger">Email verification</h3>
                 <button
                   type="button"
                   class="btn-close"
@@ -194,249 +199,25 @@
                   aria-label="Close"
                 ></button>
               </div>
-              <div class="row p-3 modal-dialog-scrollable">
-                <div
-                  class="col-12 order-lg-2 col-lg-4 bg-popup2 text-start my-3 rounded-5 p-3 shadow"
+              <form
+                class="row p-3 modal-dialog-scrollable"
+                name="Verify"
+                method="post"
+                action="verify.php"
+                onsubmit="return _myAuth()"
+              >
+                <label class="p-3 col-12 text-start" for=""
+                  >Please enter your email in the below form to verify:</label
                 >
-                  This Machine made in several procedures such as Designing,
-                  Cutting, welding, asembling and automation. In this proccess,
-                  at the beginning, vacuum pump pulls out air and moisture from
-                  the timbers for few hours. Then water and chemicals pumps into
-                  the tank under 12-13 bars of pressure and remains for 10-12
-                  hours. There is another vacuuming proccess after draining the
-                  chemicals to decrease the moisture of treated wood as much as
-                  possible. <br />
-                  <a class="btn my-5 btn-light" href="autoclave.html"
-                    ><h4>Complete Portfolio</h4></a
-                  >
-                </div>
-                <div class="col-12 order-lg-1 col-lg-8 row p-0">
-                  <div class="p-0 py-2 p-lg-3 col-12 mx-auto col-lg-6">
-                    <div class="shadow rounded-4 overflow-hidden">
-                      <img
-                        class="img-fluid"
-                        src="Images/Projects/Autoclave/1.jpg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="p-0 py-2 p-lg-3 col-12 mx-auto col-lg-6">
-                    <div class="shadow rounded-4 overflow-hidden">
-                      <img
-                        class="img-fluid"
-                        src="Images/Projects/Autoclave/2.jpg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="p-0 py-2 p-lg-3 col-12 mx-auto col-lg-6">
-                    <div class="shadow rounded-4 overflow-hidden">
-                      <img
-                        class="img-fluid"
-                        src="Images/Projects/Autoclave/3.jpg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="p-0 py-2 p-lg-3 col-12 mx-auto col-lg-6">
-                    <div class="shadow rounded-4 overflow-hidden">
-                      <img
-                        class="img-fluid"
-                        src="Images/Projects/Autoclave/4.jpg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="p-0 py-2 p-lg-3 col-12 mx-auto col-lg-6">
-                    <div class="shadow rounded-4 overflow-hidden">
-                      <img
-                        class="img-fluid"
-                        src="Images/Projects/Autoclave/5.jpg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-footer">
+                <input type="email" class="my-2 col-9 mx-auto" name="mail" />
+                <span id="verify"></span>
                 <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
+                  style="max-width: 200px"
+                  class="my-3 btn mx-auto btn-secondary col-6"
                 >
-                  Close
+                  Verify
                 </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="modal fade"
-          id="JetModal"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content bg-popup rounded-3">
-              <div class="modal-header">
-                <h3 class="px-5 modal-title text-danger" id="exampleModalLabel">
-                  High-temperature fabric dyeing machine
-                </h3>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="row p-3 modal-dialog-scrollable">
-                <div
-                  class="col-12 order-lg-2 col-lg-4 bg-popup2 jt my-3 rounded-5 p-3 shadow"
-                >
-                  This Project consists of many different proccesses such as
-                  cutting, rolling, bending, welding, lathing and etc. I
-                  designed this machine and managed to outsource most of the
-                  activities. Then we assembled and welded steel pieces together
-                  in my warehouse. <br />
-
-                  <a class="btn my-5 btn-light" href="jet.html"
-                    ><h4>Complete Portfolio</h4></a
-                  >
-                </div>
-                <div class="col-12 order-lg-1 col-lg-8 row p-0">
-                  <div class="p-0 py-2 p-lg-3 col-12 mx-auto col-lg-6">
-                    <div class="shadow rounded-4 overflow-hidden">
-                      <img
-                        class="img-fluid"
-                        src="Images/Projects/Jet/3.JPG"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="p-0 py-2 p-lg-3 col-12 mx-auto col-lg-6">
-                    <div class="shadow rounded-4 overflow-hidden">
-                      <img
-                        class="img-fluid"
-                        src="Images/Projects/Jet/4.JPG"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="p-0 py-2 p-lg-3 col-12 mx-auto col-lg-6">
-                    <div class="shadow rounded-4 overflow-hidden">
-                      <img
-                        class="img-fluid"
-                        src="Images/Projects/Jet/5.JPG"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="p-0 py-2 p-lg-3 col-12 mx-auto col-lg-6">
-                    <div class="shadow rounded-4 overflow-hidden">
-                      <img
-                        class="img-fluid"
-                        src="Images/Projects/Jet/8.JPG"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Close
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="modal fade"
-          id="AroozModal"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content bg-popup rounded-3">
-              <div class="modal-header">
-                <h3 class="px-5 modal-title text-danger" id="exampleModalLabel">
-                  Arooz angled-seat valve
-                </h3>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="row p-3 modal-dialog-scrollable">
-                <div
-                  class="col-12 order-lg-2 col-lg-4 bg-popup2 text-start my-3 rounded-5 p-3 shadow"
-                >
-                  Pnuematic valve is device that is used to control the flow of
-                  fluid in any system. Angled-seat is kind of pneumatically
-                  controlled valve with a piston actuator providing linear
-                  actuation to lift a seal off its seat. The seat is set at an
-                  angle to provide the maximum possible flow when unseated.
-                  <br />Due to lack of product of this specific type of
-                  pnuematic valve in our country, despite various use of it in
-                  different industries, I and friend of mine, invested on this
-                  start-up. High-quality and long lasting product is our
-                  company's main policy. <br />We modeled our own body stracture
-                  and made aluminium mold out of it. Each valve contains 4
-                  different casted parts and a head formed by hydraulic
-                  pressing. Casting and CNC-machining proccesses are being
-                  outsourced. Each valve contains about 30 parts and it's being
-                  assembled in our warehouse. At the moment, we produce 6
-                  different sizes from DN15 to DN50.
-                </div>
-                <div class="col-12 order-lg-1 col-lg-8 row p-0">
-                  <div class="p-0 py-2 p-lg-3 col-12 mx-auto col-lg-6">
-                    <div class="shadow rounded-4 overflow-hidden">
-                      <img
-                        class="img-fluid"
-                        src="Images/Projects/Arooz/1.JPG"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="p-0 py-2 p-lg-3 col-12 mx-auto col-lg-6">
-                    <div class="shadow rounded-4 overflow-hidden">
-                      <img
-                        class="img-fluid"
-                        src="Images/Projects/Arooz/2.JPG"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="p-0 py-2 p-lg-3 col-12 mx-auto col-lg-6">
-                    <div class="shadow rounded-4 overflow-hidden">
-                      <img
-                        class="img-fluid"
-                        src="Images/Projects/Arooz/3.JPG"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Close
-                </button>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -723,6 +504,35 @@
     </div>
     <script src="js/bootstrap.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
-    <script></script>
+    <script>
+      function _myAuth() {
+        let flag = 0;
+        let _mail = document.forms["Verify"]["mail"].value;
+        if (_mail.search(/<script/) != -1) {
+          flag++;
+          window.close();
+        }
+
+        if (
+          _mail.match(/@/g) == null ||
+          _mail.match(/@/g).length != 1 ||
+          _mail.search(/@/) < 3 ||
+          _mail.search(/@/) + 6 >= _mail.length ||
+          _mail.indexOf(".", _mail.search(/@/)) - 3 <= _mail.search(/@/)
+        ) {
+          document.getElementById("verify").innerHTML =
+            "Your mail is inccorect";
+          document
+            .getElementById("verify")
+            .setAttribute("class", "text-danger");
+          flag++;
+        } else {
+          document.getElementById("verify").innerHTML = "";
+        }
+        if (flag != 0) {
+          return false;
+        }
+      }
+    </script>
   </body>
 </html>
