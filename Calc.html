@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;margin: 0;box-sizing: border-box;
+        }
+
+        #main{
+         width: 400px;
+         height: 600px;   
+         margin: 50px auto;
+         background-color: rgb(44, 44, 44);
+         border-radius: 40px;
+         padding-top: 40px;
+         font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+        #input{
+            width: 80%;
+            height: 80px;
+            margin: 0 auto;
+            line-height: 80px;
+            font-size: 60px;
+            color: azure;
+        }
+
+        #main>div>span{
+            height: 70px;
+            width: 70px;
+            line-height: 70px;
+            text-align: center;
+            font-size: 35px;
+            border-radius: 30px;
+            margin: 10px 3px;
+            display: block;
+            cursor: pointer;
+        }
+        .numbers{
+            color: white;
+            background-color: rgb(99, 99, 99);
+        }
+        .funcs{
+            color: white;
+            background-color: rgb(255, 140, 0);
+        }
+        .funcs2{
+            color: black;
+            background-color: rgb(193, 193, 193);
+        }
+        
+
+        #btn{
+            width: 90%;
+            margin: 10px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <div id="main">
+        <div id="input">0</div>
+        <div id="btn">
+            <span onclick="C()" class="funcs2">C</span>
+            <span onclick="neg()" class="funcs2">+/-</span>
+            <span onclick="percent()" class="funcs2">%</span>
+            <span onclick="func(this)" class="funcs">/</span>
+            <span onclick="num(this)" class="numbers">7</span>
+            <span onclick="num(this)" class="numbers">8</span>
+            <span onclick="num(this)" class="numbers">9</span>
+            <span onclick="func(this)" class="funcs">x</span>
+            <span onclick="num(this)" class="numbers">4</span>
+            <span onclick="num(this)" class="numbers">5</span>
+            <span onclick="num(this)" class="numbers">6</span>
+            <span onclick="func(this)" class="funcs">-</span>
+            <span onclick="num(this)" class="numbers">1</span>
+            <span onclick="num(this)" class="numbers">2</span>
+            <span onclick="num(this)" class="numbers">3</span>
+            <span onclick="func(this)" class="funcs">+</span>
+            <span onclick="num(this)" class="numbers" style="width:152px">0</span>
+            <span onclick="num(this)" class="numbers">.</span>
+            <span onclick="equal()" class="funcs">=</span>
+
+        </div>
+    </div>
+
+    <script>
+        let x=0
+        let num1 = 0
+        let num2 = 0
+        let i = 0
+        let temp = 0
+
+        function num(self){
+            temp = document.getElementById("input").innerHTML
+            if (temp==0){
+                temp = self.innerHTML
+            }else{
+                temp += self.innerHTML
+            }
+            document.getElementById("input").innerHTML = temp
+        }
+
+        function C(){
+            document.getElementById("input").innerHTML = 0
+            num1 = 0
+            num2 = 0
+            i = 0
+            x = 0
+        }
+        function neg(){
+            temp = document.getElementById("input").innerHTML
+            if (temp!=0){
+                temp = temp * (-1)
+            }
+            document.getElementById("input").innerHTML = temp
+        }
+        function func(self){
+             num1 = document.getElementById("input").innerHTML
+             document.getElementById("input").innerHTML = 0
+             x = self.innerHTML
+             i = 1
+        }
+
+        function equal(){
+            if (i==1){
+                num2=document.getElementById("input").innerHTML
+                i++
+            }
+            console.log(num1)
+            console.log(num2)
+            console.log(x)
+            switch(x){
+                case "/" :
+                    if(num2==0){
+                        alert("Adam bash")
+                    }else{
+                    temp = num1 / num2
+                    document.getElementById("input").innerHTML= temp
+                    }
+                    break;
+                case "x" :
+                    temp = num1 * num2
+                    document.getElementById("input").innerHTML= temp
+                    break;
+                case "+" :
+                    
+                    temp = parseFloat(num1) + parseFloat(num2)
+                    document.getElementById("input").innerHTML= temp
+                    break;
+                case "-" :
+                    temp = num1 - num2
+                    document.getElementById("input").innerHTML= temp
+                    break;
+                }
+            num1 = temp
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;margin: 0;box-sizing: border-box;
+        }
+        #main{
+            width: 50%;
+            height: 400px;
+            margin: 20px auto;
+            background-color: aqua;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="main"></div>
+    <script>
+        let dx=0
+        let dy=0
+        let x1=0
+        let x2=0
+        let y1=0
+        let y2=0
+        let direction = 0
+        document.getElementById('main').addEventListener("touchstart", function(event){
+            x1=event.changedTouches[0].screenX
+            y1=event.changedTouches[0].screenY
+        })
+        document.getElementById('main').addEventListener("touchend", function(event){
+            x2=event.changedTouches[0].screenX
+            y2=event.changedTouches[0].screenY
+            dx=x2-x1
+            dy=y2-y1
+            console.log("dx , dy = "+dx+" , "+dy)
+            if(Math.abs(dx)>Math.abs(dy)){
+                if(dx>0){direction='R'}
+                else {direction='L'}
+            } else{
+                if(dy>0){direction='D'}
+                else {direction='U'}
+            }
+            document.getElementById('main').innerHTML=direction
+        })
+        
+    </script>
+</body>
+</html>
