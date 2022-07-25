@@ -45,7 +45,7 @@
         </header>
 
         <main>
-            <div class="container-fluid row w-75 mx-auto">
+            <div class="container-fluid row col-12 col-lg-9 mx-auto px-1">
                 <div class="col-12 p-0 col-lg-7">
                     <form class="mx-auto row p-1" action="" method="post" name="contactMe" onsubmit="return _myAuth()">
                         <label class="pt-1 col-4" for="name">Name:</label>
